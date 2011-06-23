@@ -2,3 +2,102 @@ MongoDB logging. Please note that logging negatively impacts performance and sho
 MONGODB admin['$cmd'].find({:ismaster=>1})
 MONGODB admin['$cmd'].find({:ismaster=>1})
 DEPRECATION WARNING: config.action_view.debug_rjs will be removed in 3.1, from 3.1 onwards you will need to install prototype-rails to continue to use RJS templates . (called from service at /Users/craig/.rvm/rubies/ruby-1.9.2-p180/lib/ruby/1.9.1/webrick/httpserver.rb:111)
+MongoDB logging. Please note that logging negatively impacts performance and should be disabled for high-performance production apps.
+MONGODB admin['$cmd'].find({:ismaster=>1})
+MONGODB admin['$cmd'].find({:ismaster=>1})
+MongoDB logging. Please note that logging negatively impacts performance and should be disabled for high-performance production apps.
+MONGODB admin['$cmd'].find({:ismaster=>1})
+MONGODB admin['$cmd'].find({:ismaster=>1})
+MongoDB logging. Please note that logging negatively impacts performance and should be disabled for high-performance production apps.
+MONGODB admin['$cmd'].find({:ismaster=>1})
+MONGODB admin['$cmd'].find({:ismaster=>1})
+MongoDB logging. Please note that logging negatively impacts performance and should be disabled for high-performance production apps.
+MONGODB admin['$cmd'].find({:ismaster=>1})
+MONGODB admin['$cmd'].find({:ismaster=>1})
+MongoDB logging. Please note that logging negatively impacts performance and should be disabled for high-performance production apps.
+MONGODB admin['$cmd'].find({:ismaster=>1})
+MONGODB admin['$cmd'].find({:ismaster=>1})
+MongoDB logging. Please note that logging negatively impacts performance and should be disabled for high-performance production apps.
+MONGODB admin['$cmd'].find({:ismaster=>1})
+MONGODB admin['$cmd'].find({:ismaster=>1})
+MongoDB logging. Please note that logging negatively impacts performance and should be disabled for high-performance production apps.
+MONGODB admin['$cmd'].find({:ismaster=>1})
+MONGODB admin['$cmd'].find({:ismaster=>1})
+MongoDB logging. Please note that logging negatively impacts performance and should be disabled for high-performance production apps.
+MONGODB admin['$cmd'].find({:ismaster=>1})
+MONGODB admin['$cmd'].find({:ismaster=>1})
+DEPRECATION WARNING: config.action_view.debug_rjs will be removed in 3.1, from 3.1 onwards you will need to install prototype-rails to continue to use RJS templates . (called from service at /Users/craig/.rvm/rubies/ruby-1.9.2-p180/lib/ruby/1.9.1/webrick/httpserver.rb:111)
+
+
+Started GET "/a" for 127.0.0.1 at 2011-06-22 20:47:50 -0400
+
+ActionController::RoutingError (No route matches "/a"):
+  
+
+Rendered /Users/craig/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/auth" for 127.0.0.1 at 2011-06-22 20:47:50 -0400
+
+ActionController::RoutingError (No route matches "/auth"):
+  
+
+Rendered /Users/craig/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/auth/facebook" for 127.0.0.1 at 2011-06-22 20:47:51 -0400
+
+
+Started GET "/auth/facebook/callback?code=i6r96XPTs9wJ_pf7WOV2tNirVAqQxa_1OR0nuPM9Tv8.eyJpdiI6IlgtNjZReV85WmNUNUpTTExpbmRBWFEifQ.hRi1Sn38SJ1D9ZfvmXz6lHt75USQ2FvmHqJ97g9MReiFQno2_uwQAQjQynPLzQ6aVtDmNMOnK180Lhja5KDrwYh1n1k5LUIIJZwwrCcmHMAbIK1Q0LrBHHBLJqi7KfB_" for 127.0.0.1 at 2011-06-22 20:48:28 -0400
+  Processing by SessionsController#create as HTML
+  Parameters: {"code"=>"i6r96XPTs9wJ_pf7WOV2tNirVAqQxa_1OR0nuPM9Tv8.eyJpdiI6IlgtNjZReV85WmNUNUpTTExpbmRBWFEifQ.hRi1Sn38SJ1D9ZfvmXz6lHt75USQ2FvmHqJ97g9MReiFQno2_uwQAQjQynPLzQ6aVtDmNMOnK180Lhja5KDrwYh1n1k5LUIIJZwwrCcmHMAbIK1Q0LrBHHBLJqi7KfB_", "provider"=>"facebook"}
+Completed 500 Internal Server Error in 2ms
+
+RuntimeError (--- 
+provider: facebook
+uid: "1298673809"
+credentials: 
+  token: 138095419602286|aa37ff4b237a67514d3f6458.1-1298673809|XjfayhK7D8fKGo5qiaonGmq1NT4
+user_info: 
+  nickname: codecraig
+  email: codecraig@gmail.com
+  first_name: Craig
+  last_name: Wickesser
+  name: Craig Wickesser
+  image: http://graph.facebook.com/1298673809/picture?type=square
+  urls: 
+    Facebook: http://www.facebook.com/codecraig
+    Website: 
+extra: 
+  user_hash: 
+    id: "1298673809"
+    name: Craig Wickesser
+    first_name: Craig
+    last_name: Wickesser
+    link: http://www.facebook.com/codecraig
+    username: codecraig
+    hometown: 
+      id: "108932639130349"
+      name: Eldersburg, Maryland
+    location: 
+      id: "105507776149184"
+      name: Hanover, Pennsylvania
+    favorite_teams: 
+    - id: "92774416228"
+      name: Baltimore Ravens
+    - id: "109819109043814"
+      name: Hershey Bears
+    - id: "105573949475837"
+      name: Washington Capitals
+    gender: male
+    email: codecraig@gmail.com
+    timezone: -4
+    locale: en_US
+    verified: true
+    updated_time: 2011-06-07T01:57:49+0000
+):
+  app/controllers/sessions_controller.rb:4:in `create'
+
+Rendered /Users/craig/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+Rendered /Users/craig/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.1ms)
+Rendered /Users/craig/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (7.1ms)
