@@ -1,0 +1,10 @@
+Total Expenses: <%= @total_expenses %>
+
+
+<%= simple_form_for @expense do |f| %>
+    <%= f.error_messages %>
+    <%= f.input :merchant %>
+    <%= f.input :amount %>
+    <%= f.input :payment_method, :collection => ['cash', 'credit', 'debit', 'check'], :as => :radio %>
+    <%= f.button :submit %>
+<% end %>

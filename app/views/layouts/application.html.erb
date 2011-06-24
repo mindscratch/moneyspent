@@ -8,6 +8,14 @@
 </head>
 <body>
 
+<div class="navigation">
+  <ul class="hmenu">
+    <%= render 'shared/menu' %>
+  </ul>
+</div>
+<%- flash.each do |name, msg| -%>
+    <%= content_tag :div, msg, :id => "flash_#{name}" if msg.is_a?(String) %>
+<%- end -%>
 <%= yield %>
 
 </body>

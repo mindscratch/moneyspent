@@ -1,0 +1,12 @@
+<% if user_signed_in? %>
+  <li>
+  <%= "Hello, #{current_user.name}" %>
+  </li>
+  <li class="right">
+  <%= link_to('Logout', signout_path, :class => 'menu') %>
+  </li>
+<% else %>
+  <li class="right">
+  <%= link_to('Login', signin_path, :class => 'menu')  %>
+  </li>
+<% end %>
