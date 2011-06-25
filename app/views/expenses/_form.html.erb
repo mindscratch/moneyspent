@@ -1,0 +1,13 @@
+<%= simple_form_for(@expense) do |f| %>
+    <%= f.error_notification %>
+
+    <div class="inputs">
+      <%= f.input :merchant %>
+      <%= f.input :amount %>
+      <%= f.input :payment_method, :collection => Expense.payment_methods, :as => :radio %>
+    </div>
+
+    <div class="actions">
+      <%= f.button :submit %>
+    </div>
+<% end %>

@@ -77,3 +77,32 @@ ul.hmenu li.right {
   color: #D00;
   display: block;
 }
+
+table.fancy {
+  margin: 1em 1em 1em 0;
+  background: whitesmoke;
+  border-collapse: collapse;
+}
+table.fancy tr:hover {
+   background: lightsteelblue !important;
+}
+table.fancy th, table.fancy td {
+  border: 1px silver solid;
+  padding: 0.2em;
+}
+table.fancy th {
+  background: gainsboro;
+  text-align: left;
+}
+table.fancy caption {
+  margin-left: inherit;
+  margin-right: inherit;
+}
+
+#table_container{
+    float:left;
+}
+
+#pie_chart_container {
+    float: right;
+}

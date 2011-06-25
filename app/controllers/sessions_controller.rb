@@ -11,7 +11,7 @@ class SessionsController < ApplicationController
 
     session[:user_id] = user.id
 
-    redirect_to expenses_index_url, :notice => 'Successfully signed in!'
+    redirect_to expenses_url, :notice => 'Successfully signed in!'
   end
 
   def destroy

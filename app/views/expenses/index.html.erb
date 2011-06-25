@@ -1,10 +1,34 @@
-Total Expenses: <%= @total_expenses %>
+<h1>Expenses</h1>
+<p>Total to date: <%= number_to_currency(@total_amount) %></p>
 
+<div>
+  <div id="table_container">
+      <table class="fancy">
+        <tr>
+          <th>Merchant</th>
+          <th>Amount</th>
+          <th>Payment method</th>
+          <th></th>
+          <th></th>
+          <th></th>
+        </tr>
 
-<%= simple_form_for @expense do |f| %>
-    <%= f.error_messages %>
-    <%= f.input :merchant %>
-    <%= f.input :amount %>
-    <%= f.input :payment_method, :collection => ['cash', 'credit', 'debit', 'check'], :as => :radio %>
-    <%= f.button :submit %>
-<% end %>
+        <% current_user.expenses.each do |expense| %>
+            <tr>
+              <td><%= expense.merchant %></td>
+              <td><%= number_to_currency(expense.amount) %></td>
+              <td><%= expense.payment_method %></td>
+              <td><%= link_to 'Show', expense %></td>
+              <td><%= link_to 'Edit', edit_expense_path(expense) %></td>
+              <td><%= link_to 'Destroy', expense, :confirm => 'Are you sure?', :method => :delete %></td>
+            </tr>
+        <% end %>
+      </table>
+      <br/>
+
+      <%= link_to 'New Expense', new_expense_path %>
+    </div>
+  <div id="pie_chart_container">
+    <div id="pie_chart"></div>
+  </div>
+</div>

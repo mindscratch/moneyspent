@@ -1,6 +1,6 @@
 Moneyspent::Application.routes.draw do
 
-  get "expenses/index"
+  resources :expenses
 
   match '/auth/:provider/callback' => 'sessions#create'
   match '/auth/failure' => 'sessions#failure'
