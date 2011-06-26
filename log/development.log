@@ -2733,3 +2733,1374 @@ Rendered shared/_menu.html.erb (0.7ms)
 Rendered layouts/application.html.erb (2.9ms)
 Rendered expenses/index.html.erb within layouts/expenses (7.8ms)
 Completed 200 OK in 12ms (Views: 10.3ms)
+DEPRECATION WARNING: config.action_view.debug_rjs will be removed in 3.1, from 3.1 onwards you will need to install prototype-rails to continue to use RJS templates . (called from <top (required)> at /Users/craig/code/projects/moneyspent/config/environment.rb:5)
+MongoDB logging. Please note that logging negatively impacts performance and should be disabled for high-performance production apps.
+DEPRECATION WARNING: config.action_view.debug_rjs will be removed in 3.1, from 3.1 onwards you will need to install prototype-rails to continue to use RJS templates . (called from <top (required)> at /Users/craig/code/projects/moneyspent/config/environment.rb:5)
+MongoDB logging. Please note that logging negatively impacts performance and should be disabled for high-performance production apps.
+MONGODB admin['$cmd'].find({:ismaster=>1})
+MONGODB admin['$cmd'].find({:ismaster=>1})
+
+
+Started GET "/expenses" for 127.0.0.1 at 2011-06-25 19:53:49 -0400
+  Processing by ExpensesController#index as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 1ms
+
+
+Started GET "/" for 127.0.0.1 at 2011-06-25 19:53:49 -0400
+  Processing by HomeController#index as HTML
+Rendered shared/_menu.html.erb (0.6ms)
+Rendered home/index.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 7ms (Views: 6.8ms)
+
+
+Started GET "/signin" for 127.0.0.1 at 2011-06-25 19:53:52 -0400
+  Processing by SessionsController#new as HTML
+Redirected to http://localhost:3000/auth/facebook
+Completed 302 Found in 0ms
+
+
+Started GET "/auth/facebook" for 127.0.0.1 at 2011-06-25 19:53:52 -0400
+
+
+Started GET "/auth/facebook/callback?code=GExUMGn7l7NsfFG62tb7orvKQhnSjb16IovqTBOvK7o.eyJpdiI6IktNUWw4TXdDaXVuQmRFTU5HTGR6WlEifQ.TCSGoZYB9jzRfVfZboudet-iadIZMVmIoxb6CzSZQFMRBQ_LJTLazx2jYypb19LCw4XElb1rtmLQj6SLkbSFz00UwoPbUbZvcO2n6nNwRUXvWGiyEy4jS82WM9tMUohX" for 127.0.0.1 at 2011-06-25 19:54:02 -0400
+  Processing by SessionsController#create as HTML
+  Parameters: {"code"=>"GExUMGn7l7NsfFG62tb7orvKQhnSjb16IovqTBOvK7o.eyJpdiI6IktNUWw4TXdDaXVuQmRFTU5HTGR6WlEifQ.TCSGoZYB9jzRfVfZboudet-iadIZMVmIoxb6CzSZQFMRBQ_LJTLazx2jYypb19LCw4XElb1rtmLQj6SLkbSFz00UwoPbUbZvcO2n6nNwRUXvWGiyEy4jS82WM9tMUohX", "provider"=>"facebook"}
+MONGODB moneyspent_development['users'].find({:provider=>"facebook", :uid=>"527145118"})
+MONGODB moneyspent_development['users'].insert([{"provider"=>"facebook", "uid"=>"527145118", "name"=>"Kelly Wickesser", "email"=>"kellyw17331@yahoo.com", "_id"=>BSON::ObjectId('4e06751c80606c4eab000001')}])
+Redirected to http://localhost:3000/expenses
+Completed 302 Found in 11ms
+
+
+Started GET "/expenses" for 127.0.0.1 at 2011-06-25 19:54:04 -0400
+  Processing by ExpensesController#index as HTML
+MONGODB moneyspent_development['users'].find({:_id=>BSON::ObjectId('4e06751c80606c4eab000001')})
+Rendered shared/_menu.html.erb (0.6ms)
+Rendered layouts/application.html.erb (2.6ms)
+Rendered expenses/index.html.erb within layouts/expenses (7.1ms)
+Completed 200 OK in 11ms (Views: 9.9ms)
+
+
+Started GET "/expenses" for 127.0.0.1 at 2011-06-25 19:54:04 -0400
+  Processing by ExpensesController#index as JSON
+MONGODB moneyspent_development['users'].find({:_id=>BSON::ObjectId('4e06751c80606c4eab000001')})
+Completed 200 OK in 2ms (Views: 1.3ms)
+
+
+Started GET "/expenses/new" for 127.0.0.1 at 2011-06-25 19:54:28 -0400
+  Processing by ExpensesController#new as HTML
+MONGODB moneyspent_development['users'].find({:_id=>BSON::ObjectId('4e06751c80606c4eab000001')})
+Rendered expenses/_form.html.erb (133.0ms)
+Rendered shared/_menu.html.erb (0.7ms)
+Rendered layouts/application.html.erb (2.7ms)
+Rendered expenses/new.html.erb within layouts/expenses (139.0ms)
+Completed 200 OK in 143ms (Views: 141.6ms)
+
+
+Started GET "/expenses/expenses" for 127.0.0.1 at 2011-06-25 19:54:28 -0400
+  Processing by ExpensesController#show as JSON
+  Parameters: {"id"=>"expenses"}
+MONGODB moneyspent_development['users'].find({:_id=>BSON::ObjectId('4e06751c80606c4eab000001')})
+Completed 500 Internal Server Error in 1ms
+
+BSON::InvalidObjectId (illegal ObjectId format):
+  app/controllers/expenses_controller.rb:21:in `show'
+
+Rendered /Users/craig/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+Rendered /Users/craig/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.5ms)
+Rendered /Users/craig/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (6.6ms)
+
+
+Started POST "/expenses" for 127.0.0.1 at 2011-06-25 19:54:42 -0400
+  Processing by ExpensesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Plp5+QvvILSY4y7nKFsXmY/vl/omdzt3HjO1bzoXRJM=", "expense"=>{"merchant"=>"walmart", "amount"=>"12", "payment_method"=>"cash"}, "commit"=>"Create Expense"}
+MONGODB moneyspent_development['users'].find({:_id=>BSON::ObjectId('4e06751c80606c4eab000001')})
+MONGODB moneyspent_development['users'].update({"_id"=>BSON::ObjectId('4e06751c80606c4eab000001')}, {"$pushAll"=>{"expenses"=>[{"_id"=>BSON::ObjectId('4e06754280606c4eab000003'), "merchant"=>"walmart", "amount"=>12.0, "payment_method"=>"cash"}]}})
+Redirected to http://localhost:3000/expenses
+Completed 302 Found in 3ms
+
+
+Started GET "/expenses" for 127.0.0.1 at 2011-06-25 19:54:42 -0400
+  Processing by ExpensesController#index as HTML
+MONGODB moneyspent_development['users'].find({:_id=>BSON::ObjectId('4e06751c80606c4eab000001')})
+Rendered shared/_menu.html.erb (0.6ms)
+Rendered layouts/application.html.erb (2.7ms)
+Rendered expenses/index.html.erb within layouts/expenses (6.9ms)
+Completed 200 OK in 11ms (Views: 9.4ms)
+
+
+Started GET "/expenses" for 127.0.0.1 at 2011-06-25 19:54:43 -0400
+  Processing by ExpensesController#index as JSON
+MONGODB moneyspent_development['users'].find({:_id=>BSON::ObjectId('4e06751c80606c4eab000001')})
+Completed 200 OK in 3ms (Views: 1.3ms)
+DEPRECATION WARNING: config.action_view.debug_rjs will be removed in 3.1, from 3.1 onwards you will need to install prototype-rails to continue to use RJS templates . (called from <top (required)> at /Users/craig/code/projects/moneyspent/config/environment.rb:5)
+MongoDB logging. Please note that logging negatively impacts performance and should be disabled for high-performance production apps.
+MONGODB admin['$cmd'].find({:ismaster=>1})
+MONGODB admin['$cmd'].find({:ismaster=>1})
+MONGODB moneyspent_development['$cmd'].find({"group"=>{"ns"=>"users", "$reduce"=><BSON::Code:2186612520 @data="function(obj, prev) { prev.group.push(obj); }" @scope="{}">, "cond"=>{}, "initial"=>{:group=>[]}}})
+MONGODB moneyspent_development['users'].find({})
+MONGODB moneyspent_development['$cmd'].find({"group"=>{"ns"=>"users", "$reduce"=><BSON::Code:2186553580 @data="function(obj, prev) { prev.count++; }" @scope="{}">, "cond"=>{}, "initial"=>{:count=>0}}})
+MONGODB moneyspent_development['users'].find({})
+MONGODB moneyspent_development['users'].find({})
+MONGODB moneyspent_development['users'].find({})
+DEPRECATION WARNING: config.action_view.debug_rjs will be removed in 3.1, from 3.1 onwards you will need to install prototype-rails to continue to use RJS templates . (called from <top (required)> at /Users/craig/code/projects/moneyspent/config/environment.rb:5)
+MongoDB logging. Please note that logging negatively impacts performance and should be disabled for high-performance production apps.
+MONGODB admin['$cmd'].find({:ismaster=>1})
+MONGODB admin['$cmd'].find({:ismaster=>1})
+MONGODB moneyspent_development['users'].find({})
+
+
+Started GET "/signout" for 127.0.0.1 at 2011-06-25 20:33:37 -0400
+  Processing by SessionsController#destroy as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 1ms
+
+
+Started GET "/" for 127.0.0.1 at 2011-06-25 20:33:37 -0400
+  Processing by HomeController#index as HTML
+Rendered shared/_menu.html.erb (0.7ms)
+Rendered home/index.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 7ms (Views: 6.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-06-25 20:33:53 -0400
+  Processing by HomeController#index as HTML
+Rendered shared/_menu.html.erb (0.6ms)
+Rendered home/index.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 6ms (Views: 5.9ms)
+
+
+Started GET "/signin" for 127.0.0.1 at 2011-06-25 20:33:55 -0400
+  Processing by SessionsController#new as HTML
+Redirected to http://localhost:3000/auth/facebook
+Completed 302 Found in 0ms
+
+
+Started GET "/auth/facebook" for 127.0.0.1 at 2011-06-25 20:33:55 -0400
+
+
+Started GET "/auth/facebook/callback?code=roPPDtH6KxgCiIlxjD1OW9XNMQAq7LgBV42suvP1VtY.eyJpdiI6Iml5SzFGaEY0X2JEaHhlSjRRTTFmZEEifQ.8jYZswEYhBNds8tp2P9eSmVo-qkWGSbUZpIHLVnQfIf4A6x_jFCJP8xK1KoMz64Kx1A-5bvKhI11p75_TvWg-pgQGuwjUEPp8vsezc1lUlmjBiXItkM-Gjl9Dv5Yyg_4" for 127.0.0.1 at 2011-06-25 20:33:57 -0400
+  Processing by SessionsController#create as HTML
+  Parameters: {"code"=>"roPPDtH6KxgCiIlxjD1OW9XNMQAq7LgBV42suvP1VtY.eyJpdiI6Iml5SzFGaEY0X2JEaHhlSjRRTTFmZEEifQ.8jYZswEYhBNds8tp2P9eSmVo-qkWGSbUZpIHLVnQfIf4A6x_jFCJP8xK1KoMz64Kx1A-5bvKhI11p75_TvWg-pgQGuwjUEPp8vsezc1lUlmjBiXItkM-Gjl9Dv5Yyg_4", "provider"=>"facebook"}
+MONGODB moneyspent_development['users'].find({:provider=>"facebook", :uid=>"1298673809"})
+Redirected to http://localhost:3000/expenses
+Completed 302 Found in 2ms
+
+
+Started GET "/expenses" for 127.0.0.1 at 2011-06-25 20:33:59 -0400
+  Processing by ExpensesController#index as HTML
+MONGODB moneyspent_development['users'].find({:_id=>BSON::ObjectId('4e03d6b080606c334c000005')})
+Rendered shared/_menu.html.erb (0.7ms)
+Rendered layouts/application.html.erb (2.8ms)
+Rendered expenses/index.html.erb within layouts/expenses (7.8ms)
+Completed 200 OK in 12ms (Views: 10.6ms)
+
+
+Started GET "/expenses" for 127.0.0.1 at 2011-06-25 20:33:59 -0400
+  Processing by ExpensesController#index as JSON
+MONGODB moneyspent_development['users'].find({:_id=>BSON::ObjectId('4e03d6b080606c334c000005')})
+Completed 200 OK in 3ms (Views: 1.6ms)
+
+
+Started GET "/expenses/new" for 127.0.0.1 at 2011-06-25 20:34:02 -0400
+  Processing by ExpensesController#new as HTML
+MONGODB moneyspent_development['users'].find({:_id=>BSON::ObjectId('4e03d6b080606c334c000005')})
+Rendered expenses/_form.html.erb (15.8ms)
+Rendered shared/_menu.html.erb (0.6ms)
+Rendered layouts/application.html.erb (2.6ms)
+Rendered expenses/new.html.erb within layouts/expenses (21.5ms)
+Completed 200 OK in 25ms (Views: 24.0ms)
+
+
+Started GET "/expenses/expenses" for 127.0.0.1 at 2011-06-25 20:34:02 -0400
+  Processing by ExpensesController#show as JSON
+  Parameters: {"id"=>"expenses"}
+MONGODB moneyspent_development['users'].find({:_id=>BSON::ObjectId('4e03d6b080606c334c000005')})
+Completed 500 Internal Server Error in 2ms
+
+BSON::InvalidObjectId (illegal ObjectId format):
+  app/controllers/expenses_controller.rb:25:in `show'
+
+Rendered /Users/craig/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+Rendered /Users/craig/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.5ms)
+Rendered /Users/craig/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (6.6ms)
+
+
+Started POST "/expenses" for 127.0.0.1 at 2011-06-25 20:34:10 -0400
+  Processing by ExpensesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Plp5+QvvILSY4y7nKFsXmY/vl/omdzt3HjO1bzoXRJM=", "expense"=>{"merchant"=>"giant", "amount"=>"34.70", "payment_method"=>"cash"}, "commit"=>"Create Expense"}
+MONGODB moneyspent_development['users'].find({:_id=>BSON::ObjectId('4e03d6b080606c334c000005')})
+MONGODB moneyspent_development['users'].update({"_id"=>BSON::ObjectId('4e03d6b080606c334c000005')}, {"$pushAll"=>{"expenses"=>[{"_id"=>BSON::ObjectId('4e067e8280606c4eab000005'), "merchant"=>"giant", "amount"=>34.7, "payment_method"=>"cash"}]}})
+Redirected to http://localhost:3000/expenses
+Completed 302 Found in 3ms
+
+
+Started GET "/expenses" for 127.0.0.1 at 2011-06-25 20:34:10 -0400
+  Processing by ExpensesController#index as HTML
+MONGODB moneyspent_development['users'].find({:_id=>BSON::ObjectId('4e03d6b080606c334c000005')})
+Rendered shared/_menu.html.erb (0.6ms)
+Rendered layouts/application.html.erb (2.6ms)
+Rendered expenses/index.html.erb within layouts/expenses (8.8ms)
+Completed 200 OK in 13ms (Views: 11.3ms)
+
+
+Started GET "/expenses" for 127.0.0.1 at 2011-06-25 20:34:10 -0400
+  Processing by ExpensesController#index as JSON
+MONGODB moneyspent_development['users'].find({:_id=>BSON::ObjectId('4e03d6b080606c334c000005')})
+Completed 200 OK in 3ms (Views: 1.5ms)
+MONGODB moneyspent_development['users'].find({})
+MONGODB moneyspent_development['users'].find({}).sort([[:_id, :desc]])
+MONGODB moneyspent_development['users'].find({})
+MONGODB moneyspent_development['users'].find({})
+MONGODB moneyspent_development['users'].find({})
+MONGODB moneyspent_development['users'].find({})
+DEPRECATION WARNING: config.action_view.debug_rjs will be removed in 3.1, from 3.1 onwards you will need to install prototype-rails to continue to use RJS templates . (called from <top (required)> at /Users/craig/code/projects/moneyspent/config/environment.rb:5)
+MongoDB logging. Please note that logging negatively impacts performance and should be disabled for high-performance production apps.
+MONGODB admin['$cmd'].find({:ismaster=>1})
+MONGODB admin['$cmd'].find({:ismaster=>1})
+
+
+Started GET "/expenses" for 127.0.0.1 at 2011-06-25 20:43:03 -0400
+  Processing by ExpensesController#index as HTML
+MONGODB moneyspent_development['users'].find({:_id=>BSON::ObjectId('4e03d6b080606c334c000005')})
+Rendered shared/_menu.html.erb (0.6ms)
+Rendered layouts/application.html.erb (2.6ms)
+Rendered expenses/index.html.erb within layouts/expenses (10.4ms)
+Completed 200 OK in 15ms (Views: 13.2ms)
+
+
+Started GET "/expenses/group_by/merchant" for 127.0.0.1 at 2011-06-25 20:43:03 -0400
+  Processing by ExpensesController#group_by as JSON
+  Parameters: {"field"=>"merchant"}
+MONGODB moneyspent_development['users'].find({:_id=>BSON::ObjectId('4e03d6b080606c334c000005')})
+Completed 200 OK in 3ms (Views: 1.4ms)
+
+
+Started GET "/expenses" for 127.0.0.1 at 2011-06-25 20:47:06 -0400
+  Processing by ExpensesController#index as HTML
+MONGODB moneyspent_development['users'].find({:_id=>BSON::ObjectId('4e03d6b080606c334c000005')})
+Rendered shared/_menu.html.erb (0.6ms)
+Rendered layouts/application.html.erb (2.6ms)
+Rendered expenses/index.html.erb within layouts/expenses (8.5ms)
+Completed 200 OK in 13ms (Views: 10.9ms)
+
+
+Started GET "/expenses/group_by/payment_method" for 127.0.0.1 at 2011-06-25 20:47:06 -0400
+  Processing by ExpensesController#group_by as JSON
+  Parameters: {"field"=>"payment_method"}
+MONGODB moneyspent_development['users'].find({:_id=>BSON::ObjectId('4e03d6b080606c334c000005')})
+Completed 200 OK in 3ms (Views: 1.2ms)
+
+
+Started GET "/expenses" for 127.0.0.1 at 2011-06-25 20:47:33 -0400
+  Processing by ExpensesController#index as HTML
+MONGODB moneyspent_development['users'].find({:_id=>BSON::ObjectId('4e03d6b080606c334c000005')})
+Rendered shared/_menu.html.erb (0.7ms)
+Rendered layouts/application.html.erb (2.8ms)
+Rendered expenses/index.html.erb within layouts/expenses (8.8ms)
+Completed 200 OK in 13ms (Views: 11.3ms)
+
+
+Started GET "/expenses/group_by/payment_method" for 127.0.0.1 at 2011-06-25 20:47:33 -0400
+  Processing by ExpensesController#group_by as JSON
+  Parameters: {"field"=>"payment_method"}
+MONGODB moneyspent_development['users'].find({:_id=>BSON::ObjectId('4e03d6b080606c334c000005')})
+Completed 200 OK in 3ms (Views: 1.2ms)
+
+
+Started GET "/expenses" for 127.0.0.1 at 2011-06-25 20:59:20 -0400
+  Processing by ExpensesController#index as HTML
+MONGODB moneyspent_development['users'].find({:_id=>BSON::ObjectId('4e03d6b080606c334c000005')})
+Rendered shared/_menu.html.erb (0.6ms)
+Rendered layouts/application.html.erb (2.6ms)
+Rendered expenses/index.html.erb within layouts/expenses (8.6ms)
+Completed 200 OK in 13ms (Views: 11.2ms)
+
+
+Started GET "/expenses/group_by/payment_method" for 127.0.0.1 at 2011-06-25 20:59:20 -0400
+  Processing by ExpensesController#group_by as JSON
+  Parameters: {"field"=>"payment_method"}
+MONGODB moneyspent_development['users'].find({:_id=>BSON::ObjectId('4e03d6b080606c334c000005')})
+Completed 200 OK in 3ms (Views: 1.3ms)
+
+
+Started GET "/expenses" for 127.0.0.1 at 2011-06-25 20:59:37 -0400
+  Processing by ExpensesController#index as HTML
+MONGODB moneyspent_development['users'].find({:_id=>BSON::ObjectId('4e03d6b080606c334c000005')})
+Rendered shared/_menu.html.erb (0.7ms)
+Rendered layouts/application.html.erb (2.7ms)
+Rendered expenses/index.html.erb within layouts/expenses (8.7ms)
+Completed 200 OK in 13ms (Views: 11.1ms)
+
+
+Started GET "/expenses/group_by/payment_method" for 127.0.0.1 at 2011-06-25 20:59:37 -0400
+  Processing by ExpensesController#group_by as JSON
+  Parameters: {"field"=>"payment_method"}
+MONGODB moneyspent_development['users'].find({:_id=>BSON::ObjectId('4e03d6b080606c334c000005')})
+Completed 200 OK in 3ms (Views: 1.3ms)
+
+
+Started GET "/expenses" for 127.0.0.1 at 2011-06-25 20:59:48 -0400
+  Processing by ExpensesController#index as HTML
+MONGODB moneyspent_development['users'].find({:_id=>BSON::ObjectId('4e03d6b080606c334c000005')})
+Rendered shared/_menu.html.erb (0.7ms)
+Rendered layouts/application.html.erb (2.8ms)
+Rendered expenses/index.html.erb within layouts/expenses (9.1ms)
+Completed 200 OK in 14ms (Views: 11.7ms)
+
+
+Started GET "/expenses/group_by/payment_method" for 127.0.0.1 at 2011-06-25 20:59:48 -0400
+  Processing by ExpensesController#group_by as JSON
+  Parameters: {"field"=>"payment_method"}
+MONGODB moneyspent_development['users'].find({:_id=>BSON::ObjectId('4e03d6b080606c334c000005')})
+Completed 200 OK in 3ms (Views: 1.2ms)
+
+
+Started GET "/expenses" for 127.0.0.1 at 2011-06-25 21:04:07 -0400
+  Processing by ExpensesController#index as HTML
+MONGODB moneyspent_development['users'].find({:_id=>BSON::ObjectId('4e03d6b080606c334c000005')})
+Rendered shared/_menu.html.erb (0.6ms)
+Rendered layouts/application.html.erb (2.6ms)
+Rendered expenses/index.html.erb within layouts/expenses (8.6ms)
+Completed 200 OK in 13ms (Views: 11.1ms)
+
+
+Started GET "/expenses/group_by/payment_method" for 127.0.0.1 at 2011-06-25 21:04:07 -0400
+  Processing by ExpensesController#group_by as JSON
+  Parameters: {"field"=>"payment_method"}
+MONGODB moneyspent_development['users'].find({:_id=>BSON::ObjectId('4e03d6b080606c334c000005')})
+Completed 200 OK in 3ms (Views: 1.2ms)
+
+
+Started GET "/expenses" for 127.0.0.1 at 2011-06-25 21:04:27 -0400
+  Processing by ExpensesController#index as HTML
+MONGODB moneyspent_development['users'].find({:_id=>BSON::ObjectId('4e03d6b080606c334c000005')})
+Rendered shared/_menu.html.erb (0.7ms)
+Rendered layouts/application.html.erb (2.7ms)
+Rendered expenses/index.html.erb within layouts/expenses (8.6ms)
+Completed 200 OK in 13ms (Views: 11.1ms)
+
+
+Started GET "/expenses/group_by/payment_method" for 127.0.0.1 at 2011-06-25 21:04:27 -0400
+  Processing by ExpensesController#group_by as JSON
+  Parameters: {"field"=>"payment_method"}
+MONGODB moneyspent_development['users'].find({:_id=>BSON::ObjectId('4e03d6b080606c334c000005')})
+Completed 200 OK in 3ms (Views: 1.3ms)
+
+
+Started GET "/expenses" for 127.0.0.1 at 2011-06-25 21:04:53 -0400
+  Processing by ExpensesController#index as HTML
+MONGODB moneyspent_development['users'].find({:_id=>BSON::ObjectId('4e03d6b080606c334c000005')})
+Rendered shared/_menu.html.erb (0.6ms)
+Rendered layouts/application.html.erb (2.6ms)
+Rendered expenses/index.html.erb within layouts/expenses (8.6ms)
+Completed 200 OK in 13ms (Views: 11.2ms)
+
+
+Started GET "/expenses/group_by/payment_method" for 127.0.0.1 at 2011-06-25 21:04:53 -0400
+  Processing by ExpensesController#group_by as JSON
+  Parameters: {"field"=>"payment_method"}
+MONGODB moneyspent_development['users'].find({:_id=>BSON::ObjectId('4e03d6b080606c334c000005')})
+Completed 200 OK in 3ms (Views: 1.2ms)
+
+
+Started GET "/expenses" for 127.0.0.1 at 2011-06-25 21:05:40 -0400
+  Processing by ExpensesController#index as HTML
+MONGODB moneyspent_development['users'].find({:_id=>BSON::ObjectId('4e03d6b080606c334c000005')})
+Rendered shared/_menu.html.erb (0.7ms)
+Rendered layouts/application.html.erb (2.8ms)
+Rendered expenses/index.html.erb within layouts/expenses (9.2ms)
+Completed 200 OK in 14ms (Views: 11.8ms)
+
+
+Started GET "/expenses/group_by/payment_method" for 127.0.0.1 at 2011-06-25 21:05:40 -0400
+  Processing by ExpensesController#group_by as JSON
+  Parameters: {"field"=>"payment_method"}
+MONGODB moneyspent_development['users'].find({:_id=>BSON::ObjectId('4e03d6b080606c334c000005')})
+Completed 200 OK in 3ms (Views: 1.3ms)
+
+
+Started GET "/expenses" for 127.0.0.1 at 2011-06-25 21:11:16 -0400
+  Processing by ExpensesController#index as HTML
+MONGODB moneyspent_development['users'].find({:_id=>BSON::ObjectId('4e03d6b080606c334c000005')})
+Rendered shared/_menu.html.erb (0.7ms)
+Rendered layouts/application.html.erb (2.8ms)
+Rendered expenses/index.html.erb within layouts/expenses (8.7ms)
+Completed 200 OK in 13ms (Views: 11.1ms)
+
+
+Started GET "/expenses/group_by/payment_method" for 127.0.0.1 at 2011-06-25 21:11:16 -0400
+  Processing by ExpensesController#group_by as JSON
+  Parameters: {"field"=>"payment_method"}
+MONGODB moneyspent_development['users'].find({:_id=>BSON::ObjectId('4e03d6b080606c334c000005')})
+Completed 200 OK in 3ms (Views: 1.4ms)
+
+
+Started GET "/expenses" for 127.0.0.1 at 2011-06-25 21:11:37 -0400
+  Processing by ExpensesController#index as HTML
+MONGODB moneyspent_development['users'].find({:_id=>BSON::ObjectId('4e03d6b080606c334c000005')})
+Rendered shared/_menu.html.erb (0.7ms)
+Rendered layouts/application.html.erb (2.8ms)
+Rendered expenses/index.html.erb within layouts/expenses (9.3ms)
+Completed 200 OK in 14ms (Views: 11.9ms)
+
+
+Started GET "/expenses/group_by/payment_method" for 127.0.0.1 at 2011-06-25 21:11:37 -0400
+  Processing by ExpensesController#group_by as JSON
+  Parameters: {"field"=>"payment_method"}
+MONGODB moneyspent_development['users'].find({:_id=>BSON::ObjectId('4e03d6b080606c334c000005')})
+Completed 200 OK in 3ms (Views: 1.2ms)
+
+
+Started GET "/expenses" for 127.0.0.1 at 2011-06-25 21:12:04 -0400
+  Processing by ExpensesController#index as HTML
+MONGODB moneyspent_development['users'].find({:_id=>BSON::ObjectId('4e03d6b080606c334c000005')})
+Rendered shared/_menu.html.erb (0.6ms)
+Rendered layouts/application.html.erb (2.6ms)
+Rendered expenses/index.html.erb within layouts/expenses (8.7ms)
+Completed 200 OK in 13ms (Views: 11.1ms)
+
+
+Started GET "/expenses/group_by/payment_method" for 127.0.0.1 at 2011-06-25 21:12:04 -0400
+  Processing by ExpensesController#group_by as JSON
+  Parameters: {"field"=>"payment_method"}
+MONGODB moneyspent_development['users'].find({:_id=>BSON::ObjectId('4e03d6b080606c334c000005')})
+Completed 200 OK in 3ms (Views: 1.3ms)
+
+
+Started GET "/expenses" for 127.0.0.1 at 2011-06-25 21:12:25 -0400
+  Processing by ExpensesController#index as HTML
+MONGODB moneyspent_development['users'].find({:_id=>BSON::ObjectId('4e03d6b080606c334c000005')})
+Rendered shared/_menu.html.erb (0.7ms)
+Rendered layouts/application.html.erb (2.7ms)
+Rendered expenses/index.html.erb within layouts/expenses (8.7ms)
+Completed 200 OK in 13ms (Views: 11.2ms)
+
+
+Started GET "/expenses/group_by/payment_method" for 127.0.0.1 at 2011-06-25 21:12:25 -0400
+  Processing by ExpensesController#group_by as JSON
+  Parameters: {"field"=>"payment_method"}
+MONGODB moneyspent_development['users'].find({:_id=>BSON::ObjectId('4e03d6b080606c334c000005')})
+Completed 200 OK in 3ms (Views: 1.2ms)
+
+
+Started GET "/expenses" for 127.0.0.1 at 2011-06-25 21:17:57 -0400
+  Processing by ExpensesController#index as HTML
+MONGODB moneyspent_development['users'].find({:_id=>BSON::ObjectId('4e03d6b080606c334c000005')})
+Rendered shared/_menu.html.erb (0.8ms)
+Rendered layouts/application.html.erb (3.0ms)
+Rendered expenses/index.html.erb within layouts/expenses (9.5ms)
+Completed 200 OK in 14ms (Views: 12.2ms)
+
+
+Started GET "/expenses/group_by/payment_method" for 127.0.0.1 at 2011-06-25 21:17:57 -0400
+  Processing by ExpensesController#group_by as JSON
+  Parameters: {"field"=>"payment_method"}
+MONGODB moneyspent_development['users'].find({:_id=>BSON::ObjectId('4e03d6b080606c334c000005')})
+Completed 200 OK in 3ms (Views: 1.3ms)
+
+
+Started GET "/expenses" for 127.0.0.1 at 2011-06-25 21:18:28 -0400
+  Processing by ExpensesController#index as HTML
+MONGODB moneyspent_development['users'].find({:_id=>BSON::ObjectId('4e03d6b080606c334c000005')})
+Rendered shared/_menu.html.erb (0.6ms)
+Rendered layouts/application.html.erb (2.6ms)
+Rendered expenses/index.html.erb within layouts/expenses (8.6ms)
+Completed 200 OK in 13ms (Views: 11.2ms)
+
+
+Started GET "/expenses/group_by/payment_method" for 127.0.0.1 at 2011-06-25 21:18:28 -0400
+  Processing by ExpensesController#group_by as JSON
+  Parameters: {"field"=>"payment_method"}
+MONGODB moneyspent_development['users'].find({:_id=>BSON::ObjectId('4e03d6b080606c334c000005')})
+Completed 200 OK in 3ms (Views: 1.2ms)
+
+
+Started GET "/expenses" for 127.0.0.1 at 2011-06-25 21:19:08 -0400
+  Processing by ExpensesController#index as HTML
+MONGODB moneyspent_development['users'].find({:_id=>BSON::ObjectId('4e03d6b080606c334c000005')})
+Rendered shared/_menu.html.erb (0.7ms)
+Rendered layouts/application.html.erb (2.7ms)
+Rendered expenses/index.html.erb within layouts/expenses (9.0ms)
+Completed 200 OK in 13ms (Views: 11.4ms)
+
+
+Started GET "/expenses/group_by/payment_method" for 127.0.0.1 at 2011-06-25 21:19:08 -0400
+  Processing by ExpensesController#group_by as JSON
+  Parameters: {"field"=>"payment_method"}
+MONGODB moneyspent_development['users'].find({:_id=>BSON::ObjectId('4e03d6b080606c334c000005')})
+Completed 200 OK in 3ms (Views: 1.3ms)
+
+
+Started GET "/expenses" for 127.0.0.1 at 2011-06-25 21:20:18 -0400
+  Processing by ExpensesController#index as HTML
+MONGODB moneyspent_development['users'].find({:_id=>BSON::ObjectId('4e03d6b080606c334c000005')})
+Rendered shared/_menu.html.erb (0.6ms)
+Rendered layouts/application.html.erb (2.7ms)
+Rendered expenses/index.html.erb within layouts/expenses (8.7ms)
+Completed 200 OK in 13ms (Views: 11.3ms)
+
+
+Started GET "/expenses/group_by/payment_method" for 127.0.0.1 at 2011-06-25 21:20:19 -0400
+  Processing by ExpensesController#group_by as JSON
+  Parameters: {"field"=>"payment_method"}
+MONGODB moneyspent_development['users'].find({:_id=>BSON::ObjectId('4e03d6b080606c334c000005')})
+Completed 200 OK in 3ms (Views: 1.2ms)
+
+
+Started GET "/expenses" for 127.0.0.1 at 2011-06-25 21:20:25 -0400
+  Processing by ExpensesController#index as HTML
+MONGODB moneyspent_development['users'].find({:_id=>BSON::ObjectId('4e03d6b080606c334c000005')})
+Rendered shared/_menu.html.erb (0.6ms)
+Rendered layouts/application.html.erb (2.6ms)
+Rendered expenses/index.html.erb within layouts/expenses (8.6ms)
+Completed 200 OK in 13ms (Views: 11.1ms)
+
+
+Started GET "/expenses/group_by/payment_method" for 127.0.0.1 at 2011-06-25 21:20:25 -0400
+  Processing by ExpensesController#group_by as JSON
+  Parameters: {"field"=>"payment_method"}
+MONGODB moneyspent_development['users'].find({:_id=>BSON::ObjectId('4e03d6b080606c334c000005')})
+Completed 200 OK in 3ms (Views: 1.2ms)
+
+
+Started GET "/expenses" for 127.0.0.1 at 2011-06-25 21:20:35 -0400
+  Processing by ExpensesController#index as HTML
+MONGODB moneyspent_development['users'].find({:_id=>BSON::ObjectId('4e03d6b080606c334c000005')})
+Rendered shared/_menu.html.erb (0.8ms)
+Rendered layouts/application.html.erb (3.0ms)
+Rendered expenses/index.html.erb within layouts/expenses (9.4ms)
+Completed 200 OK in 15ms (Views: 12.0ms)
+
+
+Started GET "/expenses/group_by/payment_method" for 127.0.0.1 at 2011-06-25 21:20:35 -0400
+  Processing by ExpensesController#group_by as JSON
+  Parameters: {"field"=>"payment_method"}
+MONGODB moneyspent_development['users'].find({:_id=>BSON::ObjectId('4e03d6b080606c334c000005')})
+Completed 200 OK in 3ms (Views: 1.3ms)
+
+
+Started GET "/expenses" for 127.0.0.1 at 2011-06-25 21:20:40 -0400
+  Processing by ExpensesController#index as HTML
+MONGODB moneyspent_development['users'].find({:_id=>BSON::ObjectId('4e03d6b080606c334c000005')})
+Rendered shared/_menu.html.erb (0.7ms)
+Rendered layouts/application.html.erb (2.8ms)
+Rendered expenses/index.html.erb within layouts/expenses (9.2ms)
+Completed 200 OK in 14ms (Views: 11.8ms)
+
+
+Started GET "/expenses/group_by/payment_method" for 127.0.0.1 at 2011-06-25 21:20:40 -0400
+  Processing by ExpensesController#group_by as JSON
+  Parameters: {"field"=>"payment_method"}
+MONGODB moneyspent_development['users'].find({:_id=>BSON::ObjectId('4e03d6b080606c334c000005')})
+Completed 200 OK in 3ms (Views: 1.2ms)
+
+
+Started GET "/expenses" for 127.0.0.1 at 2011-06-25 21:20:45 -0400
+  Processing by ExpensesController#index as HTML
+MONGODB moneyspent_development['users'].find({:_id=>BSON::ObjectId('4e03d6b080606c334c000005')})
+Rendered shared/_menu.html.erb (0.7ms)
+Rendered layouts/application.html.erb (2.8ms)
+Rendered expenses/index.html.erb within layouts/expenses (28.7ms)
+Completed 200 OK in 33ms (Views: 31.6ms)
+
+
+Started GET "/expenses/group_by/payment_method" for 127.0.0.1 at 2011-06-25 21:20:45 -0400
+  Processing by ExpensesController#group_by as JSON
+  Parameters: {"field"=>"payment_method"}
+MONGODB moneyspent_development['users'].find({:_id=>BSON::ObjectId('4e03d6b080606c334c000005')})
+Completed 200 OK in 3ms (Views: 1.2ms)
+
+
+Started GET "/expenses" for 127.0.0.1 at 2011-06-25 21:21:26 -0400
+  Processing by ExpensesController#index as HTML
+MONGODB moneyspent_development['users'].find({:_id=>BSON::ObjectId('4e03d6b080606c334c000005')})
+Rendered shared/_menu.html.erb (22.0ms)
+Rendered layouts/application.html.erb (24.2ms)
+Rendered expenses/index.html.erb within layouts/expenses (30.5ms)
+Completed 200 OK in 35ms (Views: 33.1ms)
+
+
+Started GET "/expenses/group_by/payment_method" for 127.0.0.1 at 2011-06-25 21:21:26 -0400
+  Processing by ExpensesController#group_by as JSON
+  Parameters: {"field"=>"payment_method"}
+MONGODB moneyspent_development['users'].find({:_id=>BSON::ObjectId('4e03d6b080606c334c000005')})
+Completed 200 OK in 3ms (Views: 1.2ms)
+
+
+Started GET "/expenses" for 127.0.0.1 at 2011-06-25 21:22:08 -0400
+  Processing by ExpensesController#index as HTML
+MONGODB moneyspent_development['users'].find({:_id=>BSON::ObjectId('4e03d6b080606c334c000005')})
+Rendered shared/_menu.html.erb (0.6ms)
+Rendered layouts/application.html.erb (2.5ms)
+Rendered expenses/index.html.erb within layouts/expenses (8.1ms)
+Completed 200 OK in 12ms (Views: 10.5ms)
+
+
+Started GET "/expenses/group_by/payment_method" for 127.0.0.1 at 2011-06-25 21:22:08 -0400
+  Processing by ExpensesController#group_by as JSON
+  Parameters: {"field"=>"payment_method"}
+MONGODB moneyspent_development['users'].find({:_id=>BSON::ObjectId('4e03d6b080606c334c000005')})
+Completed 200 OK in 3ms (Views: 1.2ms)
+
+
+Started GET "/expenses" for 127.0.0.1 at 2011-06-25 21:22:29 -0400
+  Processing by ExpensesController#index as HTML
+MONGODB moneyspent_development['users'].find({:_id=>BSON::ObjectId('4e03d6b080606c334c000005')})
+Rendered shared/_menu.html.erb (0.7ms)
+Rendered layouts/application.html.erb (2.9ms)
+Rendered expenses/index.html.erb within layouts/expenses (9.9ms)
+Completed 200 OK in 14ms (Views: 12.4ms)
+
+
+Started GET "/expenses/group_by/payment_method" for 127.0.0.1 at 2011-06-25 21:22:30 -0400
+  Processing by ExpensesController#group_by as JSON
+  Parameters: {"field"=>"payment_method"}
+MONGODB moneyspent_development['users'].find({:_id=>BSON::ObjectId('4e03d6b080606c334c000005')})
+Completed 200 OK in 3ms (Views: 1.3ms)
+
+
+Started GET "/expenses" for 127.0.0.1 at 2011-06-25 21:23:04 -0400
+  Processing by ExpensesController#index as HTML
+MONGODB moneyspent_development['users'].find({:_id=>BSON::ObjectId('4e03d6b080606c334c000005')})
+Rendered shared/_menu.html.erb (0.7ms)
+Rendered layouts/application.html.erb (2.9ms)
+Rendered expenses/index.html.erb within layouts/expenses (9.4ms)
+Completed 200 OK in 14ms (Views: 12.2ms)
+
+
+Started GET "/expenses/group_by/payment_method" for 127.0.0.1 at 2011-06-25 21:23:04 -0400
+  Processing by ExpensesController#group_by as JSON
+  Parameters: {"field"=>"payment_method"}
+MONGODB moneyspent_development['users'].find({:_id=>BSON::ObjectId('4e03d6b080606c334c000005')})
+Completed 200 OK in 3ms (Views: 1.2ms)
+
+
+Started GET "/expenses" for 127.0.0.1 at 2011-06-25 21:23:09 -0400
+  Processing by ExpensesController#index as HTML
+MONGODB moneyspent_development['users'].find({:_id=>BSON::ObjectId('4e03d6b080606c334c000005')})
+Rendered shared/_menu.html.erb (0.7ms)
+Rendered layouts/application.html.erb (2.8ms)
+Rendered expenses/index.html.erb within layouts/expenses (9.1ms)
+Completed 200 OK in 13ms (Views: 11.8ms)
+
+
+Started GET "/expenses/group_by/payment_method" for 127.0.0.1 at 2011-06-25 21:23:09 -0400
+  Processing by ExpensesController#group_by as JSON
+  Parameters: {"field"=>"payment_method"}
+MONGODB moneyspent_development['users'].find({:_id=>BSON::ObjectId('4e03d6b080606c334c000005')})
+Completed 200 OK in 6ms (Views: 1.9ms)
+
+
+Started GET "/expenses" for 127.0.0.1 at 2011-06-25 21:23:26 -0400
+  Processing by ExpensesController#index as HTML
+MONGODB moneyspent_development['users'].find({:_id=>BSON::ObjectId('4e03d6b080606c334c000005')})
+Rendered shared/_menu.html.erb (0.7ms)
+Rendered layouts/application.html.erb (2.8ms)
+Rendered expenses/index.html.erb within layouts/expenses (9.0ms)
+Completed 200 OK in 13ms (Views: 11.5ms)
+
+
+Started GET "/expenses/group_by/payment_method" for 127.0.0.1 at 2011-06-25 21:23:26 -0400
+  Processing by ExpensesController#group_by as JSON
+  Parameters: {"field"=>"payment_method"}
+MONGODB moneyspent_development['users'].find({:_id=>BSON::ObjectId('4e03d6b080606c334c000005')})
+Completed 200 OK in 3ms (Views: 1.3ms)
+
+
+Started GET "/expenses" for 127.0.0.1 at 2011-06-25 21:23:54 -0400
+  Processing by ExpensesController#index as HTML
+MONGODB moneyspent_development['users'].find({:_id=>BSON::ObjectId('4e03d6b080606c334c000005')})
+Rendered shared/_menu.html.erb (0.6ms)
+Rendered layouts/application.html.erb (2.6ms)
+Rendered expenses/index.html.erb within layouts/expenses (8.2ms)
+Completed 200 OK in 12ms (Views: 10.5ms)
+
+
+Started GET "/expenses/group_by/payment_method" for 127.0.0.1 at 2011-06-25 21:23:55 -0400
+  Processing by ExpensesController#group_by as JSON
+  Parameters: {"field"=>"payment_method"}
+MONGODB moneyspent_development['users'].find({:_id=>BSON::ObjectId('4e03d6b080606c334c000005')})
+Completed 200 OK in 3ms (Views: 1.3ms)
+
+
+Started GET "/expenses" for 127.0.0.1 at 2011-06-25 21:24:08 -0400
+  Processing by ExpensesController#index as HTML
+MONGODB moneyspent_development['users'].find({:_id=>BSON::ObjectId('4e03d6b080606c334c000005')})
+Rendered shared/_menu.html.erb (0.6ms)
+Rendered layouts/application.html.erb (2.6ms)
+Rendered expenses/index.html.erb within layouts/expenses (8.4ms)
+Completed 200 OK in 13ms (Views: 10.8ms)
+
+
+Started GET "/expenses/group_by/payment_method" for 127.0.0.1 at 2011-06-25 21:24:08 -0400
+  Processing by ExpensesController#group_by as JSON
+  Parameters: {"field"=>"payment_method"}
+MONGODB moneyspent_development['users'].find({:_id=>BSON::ObjectId('4e03d6b080606c334c000005')})
+Completed 200 OK in 3ms (Views: 1.3ms)
+
+
+Started GET "/expenses" for 127.0.0.1 at 2011-06-25 21:26:39 -0400
+  Processing by ExpensesController#index as HTML
+MONGODB moneyspent_development['users'].find({:_id=>BSON::ObjectId('4e03d6b080606c334c000005')})
+Rendered shared/_menu.html.erb (0.7ms)
+Rendered layouts/application.html.erb (2.9ms)
+Rendered expenses/index.html.erb within layouts/expenses (9.5ms)
+Completed 200 OK in 14ms (Views: 12.1ms)
+
+
+Started GET "/expenses/group_by/payment_method" for 127.0.0.1 at 2011-06-25 21:26:39 -0400
+  Processing by ExpensesController#group_by as JSON
+  Parameters: {"field"=>"payment_method"}
+MONGODB moneyspent_development['users'].find({:_id=>BSON::ObjectId('4e03d6b080606c334c000005')})
+Completed 200 OK in 4ms (Views: 2.2ms)
+
+
+Started GET "/expenses" for 127.0.0.1 at 2011-06-25 21:35:08 -0400
+  Processing by ExpensesController#index as HTML
+MONGODB moneyspent_development['users'].find({:_id=>BSON::ObjectId('4e03d6b080606c334c000005')})
+Rendered shared/_menu.html.erb (0.7ms)
+Rendered layouts/application.html.erb (2.6ms)
+Rendered expenses/index.html.erb within layouts/expenses (8.6ms)
+Completed 200 OK in 13ms (Views: 11.1ms)
+
+
+Started GET "/expenses/group_by/payment_method" for 127.0.0.1 at 2011-06-25 21:35:08 -0400
+  Processing by ExpensesController#group_by as JSON
+  Parameters: {"field"=>"payment_method"}
+MONGODB moneyspent_development['users'].find({:_id=>BSON::ObjectId('4e03d6b080606c334c000005')})
+Completed 200 OK in 3ms (Views: 1.3ms)
+
+
+Started GET "/expenses" for 127.0.0.1 at 2011-06-25 21:35:18 -0400
+  Processing by ExpensesController#index as HTML
+MONGODB moneyspent_development['users'].find({:_id=>BSON::ObjectId('4e03d6b080606c334c000005')})
+Rendered shared/_menu.html.erb (0.7ms)
+Rendered layouts/application.html.erb (2.9ms)
+Rendered expenses/index.html.erb within layouts/expenses (9.0ms)
+Completed 200 OK in 13ms (Views: 11.6ms)
+
+
+Started GET "/expenses/group_by/payment_method" for 127.0.0.1 at 2011-06-25 21:35:18 -0400
+  Processing by ExpensesController#group_by as JSON
+  Parameters: {"field"=>"payment_method"}
+MONGODB moneyspent_development['users'].find({:_id=>BSON::ObjectId('4e03d6b080606c334c000005')})
+Completed 200 OK in 3ms (Views: 1.2ms)
+
+
+Started GET "/expenses" for 127.0.0.1 at 2011-06-25 21:36:06 -0400
+  Processing by ExpensesController#index as HTML
+MONGODB moneyspent_development['users'].find({:_id=>BSON::ObjectId('4e03d6b080606c334c000005')})
+Rendered shared/_menu.html.erb (0.8ms)
+Rendered layouts/application.html.erb (2.9ms)
+Rendered expenses/index.html.erb within layouts/expenses (11.3ms)
+Completed 200 OK in 17ms (Views: 14.8ms)
+
+
+Started GET "/expenses/group_by/payment_method" for 127.0.0.1 at 2011-06-25 21:36:06 -0400
+  Processing by ExpensesController#group_by as JSON
+  Parameters: {"field"=>"payment_method"}
+MONGODB moneyspent_development['users'].find({:_id=>BSON::ObjectId('4e03d6b080606c334c000005')})
+Completed 200 OK in 3ms (Views: 1.3ms)
+
+
+Started GET "/expenses" for 127.0.0.1 at 2011-06-25 21:36:13 -0400
+  Processing by ExpensesController#index as HTML
+MONGODB moneyspent_development['users'].find({:_id=>BSON::ObjectId('4e03d6b080606c334c000005')})
+Rendered shared/_menu.html.erb (0.7ms)
+Rendered layouts/application.html.erb (2.8ms)
+Rendered expenses/index.html.erb within layouts/expenses (9.1ms)
+Completed 200 OK in 13ms (Views: 11.7ms)
+
+
+Started GET "/expenses/group_by/payment_method" for 127.0.0.1 at 2011-06-25 21:36:13 -0400
+  Processing by ExpensesController#group_by as JSON
+  Parameters: {"field"=>"payment_method"}
+MONGODB moneyspent_development['users'].find({:_id=>BSON::ObjectId('4e03d6b080606c334c000005')})
+Completed 200 OK in 3ms (Views: 1.5ms)
+
+
+Started GET "/expenses" for 127.0.0.1 at 2011-06-25 21:36:21 -0400
+  Processing by ExpensesController#index as HTML
+MONGODB moneyspent_development['users'].find({:_id=>BSON::ObjectId('4e03d6b080606c334c000005')})
+Rendered shared/_menu.html.erb (0.9ms)
+Rendered layouts/application.html.erb (3.3ms)
+Rendered expenses/index.html.erb within layouts/expenses (9.3ms)
+Completed 200 OK in 14ms (Views: 11.9ms)
+
+
+Started GET "/expenses/group_by/payment_method" for 127.0.0.1 at 2011-06-25 21:36:22 -0400
+  Processing by ExpensesController#group_by as JSON
+  Parameters: {"field"=>"payment_method"}
+MONGODB moneyspent_development['users'].find({:_id=>BSON::ObjectId('4e03d6b080606c334c000005')})
+Completed 200 OK in 3ms (Views: 1.3ms)
+
+
+Started GET "/expenses" for 127.0.0.1 at 2011-06-25 21:36:37 -0400
+  Processing by ExpensesController#index as HTML
+MONGODB moneyspent_development['users'].find({:_id=>BSON::ObjectId('4e03d6b080606c334c000005')})
+Rendered shared/_menu.html.erb (0.7ms)
+Rendered layouts/application.html.erb (2.8ms)
+Rendered expenses/index.html.erb within layouts/expenses (9.2ms)
+Completed 200 OK in 14ms (Views: 11.9ms)
+
+
+Started GET "/expenses/group_by/payment_method" for 127.0.0.1 at 2011-06-25 21:36:38 -0400
+  Processing by ExpensesController#group_by as JSON
+  Parameters: {"field"=>"payment_method"}
+MONGODB moneyspent_development['users'].find({:_id=>BSON::ObjectId('4e03d6b080606c334c000005')})
+Completed 200 OK in 3ms (Views: 1.2ms)
+
+
+Started GET "/expenses" for 127.0.0.1 at 2011-06-25 21:36:46 -0400
+  Processing by ExpensesController#index as HTML
+MONGODB moneyspent_development['users'].find({:_id=>BSON::ObjectId('4e03d6b080606c334c000005')})
+Rendered shared/_menu.html.erb (0.6ms)
+Rendered layouts/application.html.erb (2.6ms)
+Rendered expenses/index.html.erb within layouts/expenses (8.6ms)
+Completed 200 OK in 13ms (Views: 11.0ms)
+
+
+Started GET "/expenses/group_by/payment_method" for 127.0.0.1 at 2011-06-25 21:36:46 -0400
+  Processing by ExpensesController#group_by as JSON
+  Parameters: {"field"=>"payment_method"}
+MONGODB moneyspent_development['users'].find({:_id=>BSON::ObjectId('4e03d6b080606c334c000005')})
+Completed 200 OK in 3ms (Views: 1.2ms)
+
+
+Started GET "/expenses" for 127.0.0.1 at 2011-06-25 21:37:02 -0400
+  Processing by ExpensesController#index as HTML
+MONGODB moneyspent_development['users'].find({:_id=>BSON::ObjectId('4e03d6b080606c334c000005')})
+Rendered shared/_menu.html.erb (0.6ms)
+Rendered layouts/application.html.erb (2.6ms)
+Rendered expenses/index.html.erb within layouts/expenses (8.8ms)
+Completed 200 OK in 14ms (Views: 11.7ms)
+
+
+Started GET "/expenses/group_by/payment_method" for 127.0.0.1 at 2011-06-25 21:37:02 -0400
+  Processing by ExpensesController#group_by as JSON
+  Parameters: {"field"=>"payment_method"}
+MONGODB moneyspent_development['users'].find({:_id=>BSON::ObjectId('4e03d6b080606c334c000005')})
+Completed 200 OK in 3ms (Views: 1.3ms)
+
+
+Started GET "/expenses" for 127.0.0.1 at 2011-06-25 21:38:59 -0400
+  Processing by ExpensesController#index as HTML
+MONGODB moneyspent_development['users'].find({:_id=>BSON::ObjectId('4e03d6b080606c334c000005')})
+Rendered shared/_menu.html.erb (0.6ms)
+Rendered layouts/application.html.erb (2.6ms)
+Rendered expenses/index.html.erb within layouts/expenses (8.5ms)
+Completed 200 OK in 13ms (Views: 11.0ms)
+
+
+Started GET "/expenses/group_by/payment_method" for 127.0.0.1 at 2011-06-25 21:38:59 -0400
+  Processing by ExpensesController#group_by as JSON
+  Parameters: {"field"=>"payment_method"}
+MONGODB moneyspent_development['users'].find({:_id=>BSON::ObjectId('4e03d6b080606c334c000005')})
+Completed 200 OK in 3ms (Views: 1.2ms)
+
+
+Started GET "/expenses" for 127.0.0.1 at 2011-06-25 21:39:45 -0400
+  Processing by ExpensesController#index as HTML
+MONGODB moneyspent_development['users'].find({:_id=>BSON::ObjectId('4e03d6b080606c334c000005')})
+Rendered shared/_menu.html.erb (0.7ms)
+Rendered layouts/application.html.erb (2.7ms)
+Rendered expenses/index.html.erb within layouts/expenses (8.8ms)
+Completed 200 OK in 13ms (Views: 11.2ms)
+
+
+Started GET "/expenses/group_by/payment_method" for 127.0.0.1 at 2011-06-25 21:39:45 -0400
+  Processing by ExpensesController#group_by as JSON
+  Parameters: {"field"=>"payment_method"}
+MONGODB moneyspent_development['users'].find({:_id=>BSON::ObjectId('4e03d6b080606c334c000005')})
+Completed 200 OK in 3ms (Views: 1.2ms)
+
+
+Started GET "/expenses/group_by/merchant" for 127.0.0.1 at 2011-06-25 21:39:45 -0400
+  Processing by ExpensesController#group_by as JSON
+  Parameters: {"field"=>"merchant"}
+MONGODB moneyspent_development['users'].find({:_id=>BSON::ObjectId('4e03d6b080606c334c000005')})
+Completed 200 OK in 3ms (Views: 1.2ms)
+
+
+Started GET "/expenses" for 127.0.0.1 at 2011-06-25 21:39:50 -0400
+  Processing by ExpensesController#index as HTML
+MONGODB moneyspent_development['users'].find({:_id=>BSON::ObjectId('4e03d6b080606c334c000005')})
+Rendered shared/_menu.html.erb (0.7ms)
+Rendered layouts/application.html.erb (2.8ms)
+Rendered expenses/index.html.erb within layouts/expenses (9.1ms)
+Completed 200 OK in 13ms (Views: 11.7ms)
+
+
+Started GET "/expenses/group_by/payment_method" for 127.0.0.1 at 2011-06-25 21:39:50 -0400
+  Processing by ExpensesController#group_by as JSON
+  Parameters: {"field"=>"payment_method"}
+MONGODB moneyspent_development['users'].find({:_id=>BSON::ObjectId('4e03d6b080606c334c000005')})
+Completed 200 OK in 3ms (Views: 1.3ms)
+
+
+Started GET "/expenses/group_by/merchant" for 127.0.0.1 at 2011-06-25 21:39:50 -0400
+  Processing by ExpensesController#group_by as JSON
+  Parameters: {"field"=>"merchant"}
+MONGODB moneyspent_development['users'].find({:_id=>BSON::ObjectId('4e03d6b080606c334c000005')})
+Completed 200 OK in 3ms (Views: 1.2ms)
+
+
+Started GET "/expenses" for 127.0.0.1 at 2011-06-25 21:39:56 -0400
+  Processing by ExpensesController#index as HTML
+MONGODB moneyspent_development['users'].find({:_id=>BSON::ObjectId('4e03d6b080606c334c000005')})
+Rendered shared/_menu.html.erb (0.7ms)
+Rendered layouts/application.html.erb (2.8ms)
+Rendered expenses/index.html.erb within layouts/expenses (8.9ms)
+Completed 200 OK in 13ms (Views: 11.5ms)
+
+
+Started GET "/expenses/group_by/payment_method" for 127.0.0.1 at 2011-06-25 21:39:56 -0400
+  Processing by ExpensesController#group_by as JSON
+  Parameters: {"field"=>"payment_method"}
+MONGODB moneyspent_development['users'].find({:_id=>BSON::ObjectId('4e03d6b080606c334c000005')})
+Completed 200 OK in 22ms (Views: 1.3ms)
+
+
+Started GET "/expenses/group_by/merchant" for 127.0.0.1 at 2011-06-25 21:39:56 -0400
+  Processing by ExpensesController#group_by as JSON
+  Parameters: {"field"=>"merchant"}
+MONGODB moneyspent_development['users'].find({:_id=>BSON::ObjectId('4e03d6b080606c334c000005')})
+Completed 200 OK in 3ms (Views: 1.2ms)
+
+
+Started GET "/expenses" for 127.0.0.1 at 2011-06-25 21:39:59 -0400
+  Processing by ExpensesController#index as HTML
+MONGODB moneyspent_development['users'].find({:_id=>BSON::ObjectId('4e03d6b080606c334c000005')})
+Rendered shared/_menu.html.erb (0.7ms)
+Rendered layouts/application.html.erb (2.9ms)
+Rendered expenses/index.html.erb within layouts/expenses (10.9ms)
+Completed 200 OK in 17ms (Views: 14.4ms)
+
+
+Started GET "/expenses/group_by/payment_method" for 127.0.0.1 at 2011-06-25 21:40:00 -0400
+  Processing by ExpensesController#group_by as JSON
+  Parameters: {"field"=>"payment_method"}
+MONGODB moneyspent_development['users'].find({:_id=>BSON::ObjectId('4e03d6b080606c334c000005')})
+Completed 200 OK in 3ms (Views: 1.2ms)
+
+
+Started GET "/expenses/group_by/merchant" for 127.0.0.1 at 2011-06-25 21:40:00 -0400
+  Processing by ExpensesController#group_by as JSON
+  Parameters: {"field"=>"merchant"}
+MONGODB moneyspent_development['users'].find({:_id=>BSON::ObjectId('4e03d6b080606c334c000005')})
+Completed 200 OK in 3ms (Views: 1.2ms)
+
+
+Started GET "/expenses" for 127.0.0.1 at 2011-06-25 21:40:12 -0400
+  Processing by ExpensesController#index as HTML
+MONGODB moneyspent_development['users'].find({:_id=>BSON::ObjectId('4e03d6b080606c334c000005')})
+Rendered shared/_menu.html.erb (0.7ms)
+Rendered layouts/application.html.erb (2.9ms)
+Rendered expenses/index.html.erb within layouts/expenses (10.6ms)
+Completed 200 OK in 16ms (Views: 14.2ms)
+
+
+Started GET "/expenses/group_by/payment_method" for 127.0.0.1 at 2011-06-25 21:40:12 -0400
+  Processing by ExpensesController#group_by as JSON
+  Parameters: {"field"=>"payment_method"}
+MONGODB moneyspent_development['users'].find({:_id=>BSON::ObjectId('4e03d6b080606c334c000005')})
+Completed 200 OK in 3ms (Views: 1.3ms)
+
+
+Started GET "/expenses/group_by/merchant" for 127.0.0.1 at 2011-06-25 21:40:12 -0400
+  Processing by ExpensesController#group_by as JSON
+  Parameters: {"field"=>"merchant"}
+MONGODB moneyspent_development['users'].find({:_id=>BSON::ObjectId('4e03d6b080606c334c000005')})
+Completed 200 OK in 3ms (Views: 1.2ms)
+
+
+Started GET "/expenses" for 127.0.0.1 at 2011-06-25 21:40:26 -0400
+  Processing by ExpensesController#index as HTML
+MONGODB moneyspent_development['users'].find({:_id=>BSON::ObjectId('4e03d6b080606c334c000005')})
+Rendered shared/_menu.html.erb (0.6ms)
+Rendered layouts/application.html.erb (2.6ms)
+Rendered expenses/index.html.erb within layouts/expenses (8.6ms)
+Completed 200 OK in 13ms (Views: 11.0ms)
+
+
+Started GET "/expenses/group_by/payment_method" for 127.0.0.1 at 2011-06-25 21:40:27 -0400
+  Processing by ExpensesController#group_by as JSON
+  Parameters: {"field"=>"payment_method"}
+MONGODB moneyspent_development['users'].find({:_id=>BSON::ObjectId('4e03d6b080606c334c000005')})
+Completed 200 OK in 3ms (Views: 1.2ms)
+
+
+Started GET "/expenses/group_by/merchant" for 127.0.0.1 at 2011-06-25 21:40:27 -0400
+  Processing by ExpensesController#group_by as JSON
+  Parameters: {"field"=>"merchant"}
+MONGODB moneyspent_development['users'].find({:_id=>BSON::ObjectId('4e03d6b080606c334c000005')})
+Completed 200 OK in 3ms (Views: 1.2ms)
+
+
+Started GET "/expenses" for 127.0.0.1 at 2011-06-25 21:40:56 -0400
+  Processing by ExpensesController#index as HTML
+MONGODB moneyspent_development['users'].find({:_id=>BSON::ObjectId('4e03d6b080606c334c000005')})
+Rendered shared/_menu.html.erb (0.7ms)
+Rendered layouts/application.html.erb (2.7ms)
+Rendered expenses/index.html.erb within layouts/expenses (8.6ms)
+Completed 200 OK in 13ms (Views: 11.1ms)
+
+
+Started GET "/expenses/group_by/payment_method" for 127.0.0.1 at 2011-06-25 21:40:56 -0400
+  Processing by ExpensesController#group_by as JSON
+  Parameters: {"field"=>"payment_method"}
+MONGODB moneyspent_development['users'].find({:_id=>BSON::ObjectId('4e03d6b080606c334c000005')})
+Completed 200 OK in 3ms (Views: 1.2ms)
+
+
+Started GET "/expenses/group_by/merchant" for 127.0.0.1 at 2011-06-25 21:40:56 -0400
+  Processing by ExpensesController#group_by as JSON
+  Parameters: {"field"=>"merchant"}
+MONGODB moneyspent_development['users'].find({:_id=>BSON::ObjectId('4e03d6b080606c334c000005')})
+Completed 200 OK in 3ms (Views: 1.2ms)
+
+
+Started GET "/expenses" for 127.0.0.1 at 2011-06-25 21:41:00 -0400
+  Processing by ExpensesController#index as HTML
+MONGODB moneyspent_development['users'].find({:_id=>BSON::ObjectId('4e03d6b080606c334c000005')})
+Rendered shared/_menu.html.erb (0.7ms)
+Rendered layouts/application.html.erb (2.8ms)
+Rendered expenses/index.html.erb within layouts/expenses (28.5ms)
+Completed 200 OK in 33ms (Views: 31.1ms)
+
+
+Started GET "/expenses/group_by/payment_method" for 127.0.0.1 at 2011-06-25 21:41:01 -0400
+  Processing by ExpensesController#group_by as JSON
+  Parameters: {"field"=>"payment_method"}
+MONGODB moneyspent_development['users'].find({:_id=>BSON::ObjectId('4e03d6b080606c334c000005')})
+Completed 200 OK in 3ms (Views: 1.3ms)
+
+
+Started GET "/expenses/group_by/merchant" for 127.0.0.1 at 2011-06-25 21:41:01 -0400
+  Processing by ExpensesController#group_by as JSON
+  Parameters: {"field"=>"merchant"}
+MONGODB moneyspent_development['users'].find({:_id=>BSON::ObjectId('4e03d6b080606c334c000005')})
+Completed 200 OK in 3ms (Views: 1.2ms)
+
+
+Started GET "/expenses" for 127.0.0.1 at 2011-06-25 21:41:04 -0400
+  Processing by ExpensesController#index as HTML
+MONGODB moneyspent_development['users'].find({:_id=>BSON::ObjectId('4e03d6b080606c334c000005')})
+Rendered shared/_menu.html.erb (0.7ms)
+Rendered layouts/application.html.erb (3.3ms)
+Rendered expenses/index.html.erb within layouts/expenses (11.5ms)
+Completed 200 OK in 16ms (Views: 14.7ms)
+
+
+Started GET "/expenses/group_by/payment_method" for 127.0.0.1 at 2011-06-25 21:41:04 -0400
+  Processing by ExpensesController#group_by as JSON
+  Parameters: {"field"=>"payment_method"}
+MONGODB moneyspent_development['users'].find({:_id=>BSON::ObjectId('4e03d6b080606c334c000005')})
+Completed 200 OK in 3ms (Views: 1.3ms)
+
+
+Started GET "/expenses/group_by/merchant" for 127.0.0.1 at 2011-06-25 21:41:04 -0400
+  Processing by ExpensesController#group_by as JSON
+  Parameters: {"field"=>"merchant"}
+MONGODB moneyspent_development['users'].find({:_id=>BSON::ObjectId('4e03d6b080606c334c000005')})
+Completed 200 OK in 3ms (Views: 1.2ms)
+
+
+Started GET "/expenses" for 127.0.0.1 at 2011-06-25 21:41:08 -0400
+  Processing by ExpensesController#index as HTML
+MONGODB moneyspent_development['users'].find({:_id=>BSON::ObjectId('4e03d6b080606c334c000005')})
+Rendered shared/_menu.html.erb (0.7ms)
+Rendered layouts/application.html.erb (2.8ms)
+Rendered expenses/index.html.erb within layouts/expenses (9.0ms)
+Completed 200 OK in 13ms (Views: 11.7ms)
+
+
+Started GET "/expenses/group_by/payment_method" for 127.0.0.1 at 2011-06-25 21:41:08 -0400
+  Processing by ExpensesController#group_by as JSON
+  Parameters: {"field"=>"payment_method"}
+MONGODB moneyspent_development['users'].find({:_id=>BSON::ObjectId('4e03d6b080606c334c000005')})
+Completed 200 OK in 3ms (Views: 1.2ms)
+
+
+Started GET "/expenses/group_by/merchant" for 127.0.0.1 at 2011-06-25 21:41:08 -0400
+  Processing by ExpensesController#group_by as JSON
+  Parameters: {"field"=>"merchant"}
+MONGODB moneyspent_development['users'].find({:_id=>BSON::ObjectId('4e03d6b080606c334c000005')})
+Completed 200 OK in 3ms (Views: 1.2ms)
+
+
+Started GET "/expenses" for 127.0.0.1 at 2011-06-25 21:41:29 -0400
+  Processing by ExpensesController#index as HTML
+MONGODB moneyspent_development['users'].find({:_id=>BSON::ObjectId('4e03d6b080606c334c000005')})
+Rendered shared/_menu.html.erb (0.7ms)
+Rendered layouts/application.html.erb (2.6ms)
+Rendered expenses/index.html.erb within layouts/expenses (8.7ms)
+Completed 200 OK in 13ms (Views: 11.2ms)
+
+
+Started GET "/expenses/group_by/payment_method" for 127.0.0.1 at 2011-06-25 21:41:29 -0400
+  Processing by ExpensesController#group_by as JSON
+  Parameters: {"field"=>"payment_method"}
+MONGODB moneyspent_development['users'].find({:_id=>BSON::ObjectId('4e03d6b080606c334c000005')})
+Completed 200 OK in 3ms (Views: 1.2ms)
+
+
+Started GET "/expenses/group_by/merchant" for 127.0.0.1 at 2011-06-25 21:41:30 -0400
+  Processing by ExpensesController#group_by as JSON
+  Parameters: {"field"=>"merchant"}
+MONGODB moneyspent_development['users'].find({:_id=>BSON::ObjectId('4e03d6b080606c334c000005')})
+Completed 200 OK in 3ms (Views: 1.2ms)
+
+
+Started GET "/expenses" for 127.0.0.1 at 2011-06-25 21:42:10 -0400
+  Processing by ExpensesController#index as HTML
+MONGODB moneyspent_development['users'].find({:_id=>BSON::ObjectId('4e03d6b080606c334c000005')})
+Rendered shared/_menu.html.erb (0.6ms)
+Rendered layouts/application.html.erb (2.6ms)
+Rendered expenses/index.html.erb within layouts/expenses (8.5ms)
+Completed 200 OK in 13ms (Views: 11.0ms)
+
+
+Started GET "/expenses/group_by/payment_method" for 127.0.0.1 at 2011-06-25 21:42:10 -0400
+  Processing by ExpensesController#group_by as JSON
+  Parameters: {"field"=>"payment_method"}
+MONGODB moneyspent_development['users'].find({:_id=>BSON::ObjectId('4e03d6b080606c334c000005')})
+Completed 200 OK in 3ms (Views: 1.3ms)
+
+
+Started GET "/expenses/group_by/merchant" for 127.0.0.1 at 2011-06-25 21:42:10 -0400
+  Processing by ExpensesController#group_by as JSON
+  Parameters: {"field"=>"merchant"}
+MONGODB moneyspent_development['users'].find({:_id=>BSON::ObjectId('4e03d6b080606c334c000005')})
+Completed 200 OK in 3ms (Views: 1.2ms)
+
+
+Started GET "/expenses" for 127.0.0.1 at 2011-06-25 21:42:23 -0400
+  Processing by ExpensesController#index as HTML
+MONGODB moneyspent_development['users'].find({:_id=>BSON::ObjectId('4e03d6b080606c334c000005')})
+Rendered shared/_menu.html.erb (0.7ms)
+Rendered layouts/application.html.erb (2.7ms)
+Rendered expenses/index.html.erb within layouts/expenses (8.8ms)
+Completed 200 OK in 13ms (Views: 11.3ms)
+
+
+Started GET "/expenses/group_by/payment_method" for 127.0.0.1 at 2011-06-25 21:42:23 -0400
+  Processing by ExpensesController#group_by as JSON
+  Parameters: {"field"=>"payment_method"}
+MONGODB moneyspent_development['users'].find({:_id=>BSON::ObjectId('4e03d6b080606c334c000005')})
+Completed 200 OK in 3ms (Views: 1.2ms)
+
+
+Started GET "/expenses/group_by/merchant" for 127.0.0.1 at 2011-06-25 21:42:23 -0400
+  Processing by ExpensesController#group_by as JSON
+  Parameters: {"field"=>"merchant"}
+MONGODB moneyspent_development['users'].find({:_id=>BSON::ObjectId('4e03d6b080606c334c000005')})
+Completed 200 OK in 3ms (Views: 1.2ms)
+
+
+Started GET "/expenses" for 127.0.0.1 at 2011-06-25 21:42:52 -0400
+  Processing by ExpensesController#index as HTML
+MONGODB moneyspent_development['users'].find({:_id=>BSON::ObjectId('4e03d6b080606c334c000005')})
+Rendered shared/_menu.html.erb (0.8ms)
+Rendered layouts/application.html.erb (2.9ms)
+Rendered expenses/index.html.erb within layouts/expenses (9.3ms)
+Completed 200 OK in 14ms (Views: 11.9ms)
+
+
+Started GET "/expenses/group_by/payment_method" for 127.0.0.1 at 2011-06-25 21:42:52 -0400
+  Processing by ExpensesController#group_by as JSON
+  Parameters: {"field"=>"payment_method"}
+MONGODB moneyspent_development['users'].find({:_id=>BSON::ObjectId('4e03d6b080606c334c000005')})
+Completed 200 OK in 3ms (Views: 1.2ms)
+
+
+Started GET "/expenses/group_by/merchant" for 127.0.0.1 at 2011-06-25 21:42:52 -0400
+  Processing by ExpensesController#group_by as JSON
+  Parameters: {"field"=>"merchant"}
+MONGODB moneyspent_development['users'].find({:_id=>BSON::ObjectId('4e03d6b080606c334c000005')})
+Completed 200 OK in 3ms (Views: 1.2ms)
+
+
+Started GET "/expenses" for 127.0.0.1 at 2011-06-25 21:42:57 -0400
+  Processing by ExpensesController#index as HTML
+MONGODB moneyspent_development['users'].find({:_id=>BSON::ObjectId('4e03d6b080606c334c000005')})
+Rendered shared/_menu.html.erb (0.6ms)
+Rendered layouts/application.html.erb (2.7ms)
+Rendered expenses/index.html.erb within layouts/expenses (8.7ms)
+Completed 200 OK in 13ms (Views: 11.2ms)
+
+
+Started GET "/expenses/group_by/payment_method" for 127.0.0.1 at 2011-06-25 21:42:57 -0400
+  Processing by ExpensesController#group_by as JSON
+  Parameters: {"field"=>"payment_method"}
+MONGODB moneyspent_development['users'].find({:_id=>BSON::ObjectId('4e03d6b080606c334c000005')})
+Completed 200 OK in 3ms (Views: 1.2ms)
+
+
+Started GET "/expenses/group_by/merchant" for 127.0.0.1 at 2011-06-25 21:42:57 -0400
+  Processing by ExpensesController#group_by as JSON
+  Parameters: {"field"=>"merchant"}
+MONGODB moneyspent_development['users'].find({:_id=>BSON::ObjectId('4e03d6b080606c334c000005')})
+Completed 200 OK in 3ms (Views: 1.2ms)
+
+
+Started GET "/expenses" for 127.0.0.1 at 2011-06-25 21:43:59 -0400
+  Processing by ExpensesController#index as HTML
+MONGODB moneyspent_development['users'].find({:_id=>BSON::ObjectId('4e03d6b080606c334c000005')})
+Rendered shared/_menu.html.erb (0.6ms)
+Rendered layouts/application.html.erb (2.6ms)
+Rendered expenses/index.html.erb within layouts/expenses (8.5ms)
+Completed 200 OK in 13ms (Views: 11.0ms)
+
+
+Started GET "/expenses/group_by/payment_method" for 127.0.0.1 at 2011-06-25 21:43:59 -0400
+  Processing by ExpensesController#group_by as JSON
+  Parameters: {"field"=>"payment_method"}
+MONGODB moneyspent_development['users'].find({:_id=>BSON::ObjectId('4e03d6b080606c334c000005')})
+Completed 200 OK in 3ms (Views: 1.2ms)
+
+
+Started GET "/expenses/group_by/merchant" for 127.0.0.1 at 2011-06-25 21:43:59 -0400
+  Processing by ExpensesController#group_by as JSON
+  Parameters: {"field"=>"merchant"}
+MONGODB moneyspent_development['users'].find({:_id=>BSON::ObjectId('4e03d6b080606c334c000005')})
+Completed 200 OK in 3ms (Views: 1.2ms)
+
+
+Started GET "/expenses" for 127.0.0.1 at 2011-06-25 21:44:06 -0400
+  Processing by ExpensesController#index as HTML
+MONGODB moneyspent_development['users'].find({:_id=>BSON::ObjectId('4e03d6b080606c334c000005')})
+Rendered shared/_menu.html.erb (0.7ms)
+Rendered layouts/application.html.erb (2.8ms)
+Rendered expenses/index.html.erb within layouts/expenses (9.5ms)
+Completed 200 OK in 14ms (Views: 12.1ms)
+
+
+Started GET "/expenses/group_by/payment_method" for 127.0.0.1 at 2011-06-25 21:44:06 -0400
+  Processing by ExpensesController#group_by as JSON
+  Parameters: {"field"=>"payment_method"}
+MONGODB moneyspent_development['users'].find({:_id=>BSON::ObjectId('4e03d6b080606c334c000005')})
+Completed 200 OK in 3ms (Views: 1.3ms)
+
+
+Started GET "/expenses/group_by/merchant" for 127.0.0.1 at 2011-06-25 21:44:06 -0400
+  Processing by ExpensesController#group_by as JSON
+  Parameters: {"field"=>"merchant"}
+MONGODB moneyspent_development['users'].find({:_id=>BSON::ObjectId('4e03d6b080606c334c000005')})
+Completed 200 OK in 3ms (Views: 1.2ms)
+
+
+Started GET "/expenses" for 127.0.0.1 at 2011-06-25 21:45:14 -0400
+  Processing by ExpensesController#index as HTML
+MONGODB moneyspent_development['users'].find({:_id=>BSON::ObjectId('4e03d6b080606c334c000005')})
+Rendered shared/_menu.html.erb (0.7ms)
+Rendered layouts/application.html.erb (2.7ms)
+Rendered expenses/index.html.erb within layouts/expenses (8.9ms)
+Completed 200 OK in 13ms (Views: 11.4ms)
+
+
+Started GET "/expenses/group_by/payment_method" for 127.0.0.1 at 2011-06-25 21:45:14 -0400
+  Processing by ExpensesController#group_by as JSON
+  Parameters: {"field"=>"payment_method"}
+MONGODB moneyspent_development['users'].find({:_id=>BSON::ObjectId('4e03d6b080606c334c000005')})
+Completed 200 OK in 3ms (Views: 1.3ms)
+
+
+Started GET "/expenses/group_by/merchant" for 127.0.0.1 at 2011-06-25 21:45:14 -0400
+  Processing by ExpensesController#group_by as JSON
+  Parameters: {"field"=>"merchant"}
+MONGODB moneyspent_development['users'].find({:_id=>BSON::ObjectId('4e03d6b080606c334c000005')})
+Completed 200 OK in 3ms (Views: 1.2ms)
+
+
+Started GET "/expenses" for 127.0.0.1 at 2011-06-25 21:45:28 -0400
+  Processing by ExpensesController#index as HTML
+MONGODB moneyspent_development['users'].find({:_id=>BSON::ObjectId('4e03d6b080606c334c000005')})
+Rendered shared/_menu.html.erb (0.7ms)
+Rendered layouts/application.html.erb (2.8ms)
+Rendered expenses/index.html.erb within layouts/expenses (28.1ms)
+Completed 200 OK in 32ms (Views: 30.7ms)
+
+
+Started GET "/expenses/group_by/payment_method" for 127.0.0.1 at 2011-06-25 21:45:29 -0400
+  Processing by ExpensesController#group_by as JSON
+  Parameters: {"field"=>"payment_method"}
+MONGODB moneyspent_development['users'].find({:_id=>BSON::ObjectId('4e03d6b080606c334c000005')})
+Completed 200 OK in 5ms (Views: 2.1ms)
+
+
+Started GET "/expenses/group_by/merchant" for 127.0.0.1 at 2011-06-25 21:45:29 -0400
+  Processing by ExpensesController#group_by as JSON
+  Parameters: {"field"=>"merchant"}
+MONGODB moneyspent_development['users'].find({:_id=>BSON::ObjectId('4e03d6b080606c334c000005')})
+Completed 200 OK in 3ms (Views: 1.2ms)
+
+
+Started GET "/expenses" for 127.0.0.1 at 2011-06-25 21:45:38 -0400
+  Processing by ExpensesController#index as HTML
+MONGODB moneyspent_development['users'].find({:_id=>BSON::ObjectId('4e03d6b080606c334c000005')})
+Rendered shared/_menu.html.erb (0.7ms)
+Rendered layouts/application.html.erb (2.8ms)
+Rendered expenses/index.html.erb within layouts/expenses (8.9ms)
+Completed 200 OK in 13ms (Views: 11.4ms)
+
+
+Started GET "/expenses/group_by/payment_method" for 127.0.0.1 at 2011-06-25 21:45:39 -0400
+  Processing by ExpensesController#group_by as JSON
+  Parameters: {"field"=>"payment_method"}
+MONGODB moneyspent_development['users'].find({:_id=>BSON::ObjectId('4e03d6b080606c334c000005')})
+Completed 200 OK in 3ms (Views: 1.2ms)
+
+
+Started GET "/expenses/group_by/merchant" for 127.0.0.1 at 2011-06-25 21:45:39 -0400
+  Processing by ExpensesController#group_by as JSON
+  Parameters: {"field"=>"merchant"}
+MONGODB moneyspent_development['users'].find({:_id=>BSON::ObjectId('4e03d6b080606c334c000005')})
+Completed 200 OK in 3ms (Views: 1.2ms)
+
+
+Started GET "/expenses/expenses" for 127.0.0.1 at 2011-06-25 21:45:44 -0400
+  Processing by ExpensesController#show as JSON
+  Parameters: {"id"=>"expenses"}
+MONGODB moneyspent_development['users'].find({:_id=>BSON::ObjectId('4e03d6b080606c334c000005')})
+Completed 500 Internal Server Error in 2ms
+
+BSON::InvalidObjectId (illegal ObjectId format):
+  app/controllers/expenses_controller.rb:20:in `show'
+
+Rendered /Users/craig/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+Rendered /Users/craig/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.6ms)
+Rendered /Users/craig/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (6.8ms)
+
+
+Started POST "/expenses" for 127.0.0.1 at 2011-06-25 21:45:54 -0400
+  Processing by ExpensesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Plp5+QvvILSY4y7nKFsXmY/vl/omdzt3HjO1bzoXRJM=", "expense"=>{"merchant"=>"giant", "amount"=>"12.32", "payment_method"=>"credit"}, "commit"=>"Create Expense"}
+MONGODB moneyspent_development['users'].find({:_id=>BSON::ObjectId('4e03d6b080606c334c000005')})
+MONGODB moneyspent_development['users'].update({"_id"=>BSON::ObjectId('4e03d6b080606c334c000005')}, {"$pushAll"=>{"expenses"=>[{"_id"=>BSON::ObjectId('4e068f5280606c508d000001'), "merchant"=>"giant", "amount"=>12.32, "payment_method"=>"credit"}]}})
+Redirected to http://localhost:3000/expenses
+Completed 302 Found in 4ms
+
+
+Started GET "/expenses" for 127.0.0.1 at 2011-06-25 21:45:54 -0400
+  Processing by ExpensesController#index as HTML
+MONGODB moneyspent_development['users'].find({:_id=>BSON::ObjectId('4e03d6b080606c334c000005')})
+Rendered shared/_menu.html.erb (0.6ms)
+Rendered layouts/application.html.erb (2.6ms)
+Rendered expenses/index.html.erb within layouts/expenses (10.0ms)
+Completed 200 OK in 14ms (Views: 12.5ms)
+
+
+Started GET "/expenses/group_by/payment_method" for 127.0.0.1 at 2011-06-25 21:45:54 -0400
+  Processing by ExpensesController#group_by as JSON
+  Parameters: {"field"=>"payment_method"}
+MONGODB moneyspent_development['users'].find({:_id=>BSON::ObjectId('4e03d6b080606c334c000005')})
+Completed 200 OK in 3ms (Views: 1.3ms)
+
+
+Started GET "/expenses/group_by/merchant" for 127.0.0.1 at 2011-06-25 21:45:54 -0400
+  Processing by ExpensesController#group_by as JSON
+  Parameters: {"field"=>"merchant"}
+MONGODB moneyspent_development['users'].find({:_id=>BSON::ObjectId('4e03d6b080606c334c000005')})
+Completed 200 OK in 3ms (Views: 1.2ms)

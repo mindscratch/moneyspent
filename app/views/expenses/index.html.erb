@@ -3,31 +3,31 @@
 
 <div>
   <div id="table_container">
-      <table class="fancy">
-        <tr>
-          <th>Merchant</th>
-          <th>Amount</th>
-          <th>Payment method</th>
-          <th></th>
-          <th></th>
-          <th></th>
-        </tr>
+    <table class="fancy">
+      <tr>
+        <th>Merchant</th>
+        <th>Amount</th>
+        <th>Payment method</th>
+        <th></th>
+        <th></th>
+        <th></th>
+      </tr>
 
-        <% current_user.expenses.each do |expense| %>
-            <tr>
-              <td><%= expense.merchant %></td>
-              <td><%= number_to_currency(expense.amount) %></td>
-              <td><%= expense.payment_method %></td>
-              <td><%= link_to 'Show', expense %></td>
-              <td><%= link_to 'Edit', edit_expense_path(expense) %></td>
-              <td><%= link_to 'Destroy', expense, :confirm => 'Are you sure?', :method => :delete %></td>
-            </tr>
-        <% end %>
-      </table>
-      <br/>
+      <% current_user.expenses.each do |expense| %>
+          <tr>
+            <td><%= expense.merchant %></td>
+            <td><%= number_to_currency(expense.amount) %></td>
+            <td><%= expense.payment_method %></td>
+            <td><%= link_to 'Show', expense %></td>
+            <td><%= link_to 'Edit', edit_expense_path(expense) %></td>
+            <td><%= link_to 'Destroy', expense, :confirm => 'Are you sure?', :method => :delete %></td>
+          </tr>
+      <% end %>
+    </table>
+    <br/>
 
-      <%= link_to 'New Expense', new_expense_path %>
-    </div>
+    <%= link_to 'New Expense', new_expense_path %>
+  </div>
   <div id="pie_chart_container">
     <div id="pie_chart"></div>
   </div>

@@ -100,9 +100,11 @@ table.fancy caption {
 }
 
 #table_container{
-    float:left;
+    max-width: 450px;
+    float: left;
 }
 
 #pie_chart_container {
-    float: right;
+    width: 100%;
+    margin: 0 0 0 455px;
 }

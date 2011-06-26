@@ -83,4 +83,21 @@ class ExpensesController < ApplicationController
       format.xml  { head :ok }
     end
   end
+
+  def group_by
+    response = {}
+    success = false
+    begin
+      response = Expense.group_by params[:field], current_user.expenses
+      success = true
+    rescue Exception => ex
+      response = "Error occurred while grouping expenses: #{ex.message}"
+    end
+
+    respond_to do |format|
+      format.json {
+        render :json => response, :status => (success ? 200 : 500)
+      }
+    end
+  end
 end
